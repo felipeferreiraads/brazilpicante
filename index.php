@@ -185,14 +185,6 @@
 		</footer>
 
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style.min.css">
-
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/parallax.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel2.thumbs.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/index.js"></script>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/bundle.min.js"></script>
 	</body>
 </html>	

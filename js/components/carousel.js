@@ -1,6 +1,5 @@
 import $ from 'jquery'
-import '../modules/owl-carousel'
-import '../modules/owl-carousel-thumbs'
+import 'owl.carousel'
 
 $('.carousel').owlCarousel({
     items: 1,
