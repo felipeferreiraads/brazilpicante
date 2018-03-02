@@ -2,7 +2,11 @@
  * Components.
  */
 
-const base_url = 'http://brazilpicante.localhost/'
-const template_url = 'http://brazilpicante.localhost/wp-content/themes/brasil-picante'
-
+import './components/banner'
 import './components/carousel'
+import './components/contact'
+import './components/map'
+import './components/menu'
+import './components/menu-scroll'
+import './components/post'
+import './components/see-more'

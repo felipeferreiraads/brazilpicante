@@ -131,17 +131,9 @@
 
 		<section id="contato">
 			<div class="map">
-				<div class="map-item" id="agua-verde">				
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.9054590076953!2d-49.264712985436645!3d-25.44142408378319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce45dea0a9a6f%3A0xb79c1889a9c7777a!2sAv.+Pres.+Get%C3%BAlio+Vargas%2C+259+-+Rebou%C3%A7as%2C+Curitiba+-+PR!5e0!3m2!1spt-BR!2sbr!4v1518138237746" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-
-				<div class="map-item" id="alto-gloria">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.0316815382103!2d-49.25988108543757!3d-25.40375008380057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce69c3689de4f%3A0xa8561c4271404555!2sAv.+Anita+Garibaldi%2C+888+-+Cabral%2C+Curitiba+-+PR!5e0!3m2!1spt-BR!2sbr!4v1518138555647" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-
-				<div class="map-item" id="ahu">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.650335224076!2d-49.26692418543714!3d-25.41651258379464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce418638d596f%3A0x4e3fd77d6724934f!2sR.+Mau%C3%A1%2C+1099+-+Alto+da+Gl%C3%B3ria%2C+Curitiba+-+PR%2C+80030-200!5e0!3m2!1spt-BR!2sbr!4v1518138656009" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
+				<div class="map-item" id="agua-verde"></div>
+				<div class="map-item" id="alto-gloria"></div>
+				<div class="map-item" id="ahu"></div>
 			</div>
 
 			<div class="form">
@@ -184,7 +176,7 @@
 			<p>&copy; Brazil Picante 2017 - Todos os direitos reservados</p>
 		</footer>
 
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style.min.css">
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/bundle.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style.min.css" media="none" onload="if(media!='all')media='all'">
+		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/bundle.min.js" defer></script>
 	</body>
 </html>	

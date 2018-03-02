@@ -1,8 +1,6 @@
-import $ from 'jquery'
-
-var paged = 2;
+var paged = 2
 $('.see-more').on('click', function(event) {
-    event.preventDefault();
+    event.preventDefault()
     $.ajax({
         url: base_url + 'ajax-posts/',
         type: 'POST',
@@ -10,7 +8,7 @@ $('.see-more').on('click', function(event) {
         data: {paged: paged},
     })
     .done(function(html) {
-        $('#dicas-do-chefe .items').append(html);
-        paged++;
+        $('#dicas-do-chefe .items').append(html)
+        paged++
     })    
 })

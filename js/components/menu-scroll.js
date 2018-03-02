@@ -1,9 +1,7 @@
-import $ from 'jquery'
-
-let didScroll;
-let lastScrollTop = 0;
-let delta = 5;
-let navbarHeight = $('header').outerHeight();
+let didScroll
+let lastScrollTop = 0
+let delta = 5
+let navbarHeight = $('header').outerHeight()
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -11,24 +9,24 @@ $(window).scroll(function(event){
 
 setInterval(function() {
     if (didScroll) {
-        hasScrolled();
-        didScroll = false;
+        hasScrolled()
+        didScroll = false
     }
 }, 250);
 
 function hasScrolled() {
-    var st = $(this).scrollTop();
+    var st = $(window).scrollTop()
     
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
     
     if (st > lastScrollTop && st > navbarHeight){
-        $('header').removeClass('nav-down').addClass('nav-up');
+        $('header').removeClass('nav-down').addClass('nav-up')
     } else {
         if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
+            $('header').removeClass('nav-up').addClass('nav-down')
         }
     }
     
-    lastScrollTop = st;
+    lastScrollTop = st
 }

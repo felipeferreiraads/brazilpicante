@@ -1,5 +1,4 @@
-import $ from 'jquery'
-import '../modules/smooth-scroll'
+import 'jquery-smooth-scroll'
 import '../modules/jquery-ui'
 
 $('.menu-mobile-link').click(function(){

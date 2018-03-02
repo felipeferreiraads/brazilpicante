@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import '../modules/fancybox'
 
 function fancyboxAlert(mensagem)
@@ -17,19 +16,19 @@ function fancyboxAlert(mensagem)
 }
 
 $('#form-contact').on('submit', function(event) {
-    event.preventDefault();
-    fancyboxAlert('AGUARDE...');
+    event.preventDefault()
+    fancyboxAlert('AGUARDE...')
     $.ajax({
         type: 'POST',
-        url: base_url + '/forms/',
+        url: '/forms/',
         data: $(this).serialize(),
         dataType: 'json',
         success: function(json){
-            $('#form-contact')[0].reset();
-            fancyboxAlert(json.mensagem);
+            $('#form-contact')[0].reset()
+            fancyboxAlert(json.mensagem)
         },
         error: function(){
-            fancyboxAlert('Aconteceu um erro. Tente novamente.');   
+            fancyboxAlert('Aconteceu um erro. Tente novamente.')
         }
-    });
-});
+    })
+})

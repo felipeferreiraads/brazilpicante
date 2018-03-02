@@ -1,7 +1,5 @@
-import $ from 'jquery'
-
 $('#dicas-do-chefe .items a').on('click', function(event) {
-    event.preventDefault();
+    event.preventDefault()
     $.ajax({
         type: 'GET',
         url: $(this).attr('href'),
@@ -18,7 +16,7 @@ $('#dicas-do-chefe .items a').on('click', function(event) {
             );
         },
         error: function(){
-            fancyboxAlert('Aconteceu um erro. Tente novamente.');   
+            fancyboxAlert('Aconteceu um erro. Tente novamente.')
         }
-    });
-});
+    })
+})

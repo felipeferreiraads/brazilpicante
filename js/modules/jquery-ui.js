@@ -1,5 +1,3 @@
-import {jQuery, $} from 'jquery'
-
 /*! jQuery UI - v1.12.1 - 2017-08-01
 * http://jqueryui.com
 * Includes: effect.js, effects/effect-slide.js
