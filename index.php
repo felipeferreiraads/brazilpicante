@@ -131,34 +131,30 @@
 
 		<section id="contato">
 			<div class="map">
-				<div class="map-item" id="agua-verde"></div>
-				<div class="map-item" id="alto-gloria"></div>
-				<div class="map-item" id="ahu"></div>
+			<?php
+				$count = 0;
+				$maps = array();
+				while(have_rows('enderecos', 'option')): the_row(); $fields = get_sub_field('enderecos_sub'); 
+					$count++;?>
+					<div class="map-item" id="map-<?php echo $count;?>">
+						<?php echo $fields['endereco_mapa'];?>
+					</div><?php
+				endwhile;
+			?>
 			</div>
 
 			<div class="form">
 				<h2>Venha nos visitar!</h2>
 				<div class="address">
+				<?php
+					$count = 0;
+					while(have_rows('enderecos', 'option')): the_row(); $fields = get_sub_field('enderecos_sub'); $count++;?>
 					<div class="info">
-						<h3>Unidade Água Verde</h3>
-						<address>Av. Pres. Getúlio Vargas, 2591</address>
-						<address>Água Verde - Curitiba / PR</address>
-						<a href="#" data-map="#agua-verde">Ver mapa</a>
+						<h3><?php echo $fields['endereco_nome'];?></h3>
+						<?php echo $fields['endereco_text'];?>
+						<a href="#" data-map="#map-<?php echo $count;?>">Ver mapa</a>
 					</div>
-
-					<div class="info">
-						<h3>Unidade Alto da Glória</h3>
-						<address>Av. Anita Garibaldi, 888</address>
-						<address>Alto da Glória - Curitiba / PR</address>
-						<a href="#" data-map="#alto-gloria">Ver mapa</a>
-					</div>
-
-					<div class="info">
-						<h3>Unidade Ahú</h3>
-						<address>Rua Mauá, 1099</address>
-						<address>Ahú - Curitiba / PR</address>
-						<a href="#" data-map="#ahu">Ver mapa</a>
-					</div>
+				<?php endwhile; ?>
 				</div>
 
 				<h2 class="fale-conosco">Fale Conosco</h2>
@@ -175,7 +171,11 @@
 		<footer>
 			<p>&copy; Brazil Picante 2017 - Todos os direitos reservados</p>
 		</footer>
-
+			
+		<?php $banner = get_field('banners', 'option');?>
+		<script>
+			var banner = '<?php echo $banner[0]['url'];?>';
+		</script>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/css/style.min.css" media="none" onload="if(media!='all')media='all'">
 		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/bundle.min.js" defer></script>
 	</body>
