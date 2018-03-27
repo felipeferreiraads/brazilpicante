@@ -63,13 +63,12 @@
 		<div class="home"></div>
 
 		<section id="banner">
-			<div class="container">
-				<div class="cardapio">
-					<h1>Somos a Brazil Picante</h1>
-					<p>Preparamos sempre a melhor refeição para você e sua familia!</p>
-					<a href="#quem-somos">Saiba mais</a>
-				</div>
-			</div>
+			<?php
+				$banners = get_field('banners', 'option');
+				foreach($banners as $img):
+					echo '<div><img src="'.$img['url'].'"></div>';
+				endforeach;
+			?>
 		</section>
 
 		<section id="quem-somos">

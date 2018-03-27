@@ -2,7 +2,7 @@
  * Components.
  */
 
-import './components/banner'
+//import './components/banner'
 import './components/carousel'
 import './components/contact'
 import './components/map'
