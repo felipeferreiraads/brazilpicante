@@ -15,6 +15,14 @@ $('.carousel, .prev, .next').hover(function() {
     $('.next').css('display','none')
 });
 
+$('.slides, .prev-slider, .next-slider').hover(function () {
+    $('.prev-slider').css('display', 'flex')
+    $('.next-slider').css('display', 'flex')
+}, function () {
+    $('.prev-slider').css('display', 'none')
+    $('.next-slider').css('display', 'none')
+});
+
 $('.next').click(function() {
     $('.carousel').trigger('next.owl.carousel')
     return false
@@ -25,7 +33,20 @@ $('.prev').click(function() {
     return false
 });
 
-$('#banner').owlCarousel({
+$('.slides').owlCarousel({
     items: 1,
-    thumbs: false
+    thumbs: false,
+    autoplay: true,
+    loop: true,
+    autoplayTimeout: 4000
+});
+
+$('.next-slider').click(function () {
+    $('.slides').trigger('next.owl.carousel')
+    return false
+});
+
+$('.prev-slider').click(function () {
+    $('.slides').trigger('prev.owl.carousel', [300])
+    return false
 });
